@@ -15,13 +15,16 @@ const NewTodo = (props) => {
   const deleteTodoRequest = async (user) => {
     // fetch req with todo id in params.
     try {
-      const response = await fetch("/todos/" + props.todo._id, {
-        method: "DELETE",
-        headers: {
-          "Content-Type": "application/json",
-          Authorization: `Bearer ${user.token}`,
-        },
-      });
+      const response = await fetch(
+        "https://murky-stamp-production.up.railway.app/todos/" + props.todo._id,
+        {
+          method: "DELETE",
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: `Bearer ${user.token}`,
+          },
+        }
+      );
       // recevies updated todos from db
       const data = await response.json();
       // sets new list of todos.
@@ -37,14 +40,17 @@ const NewTodo = (props) => {
     const todo = entry;
     try {
       // patch request to server uses token for auth. sends updated to do
-      const response = await fetch("/todos/" + props.todo._id, {
-        method: "PATCH",
-        headers: {
-          "Content-Type": "application/json",
-          Authorization: `Bearer ${user.token}`,
-        },
-        body: JSON.stringify({ todo }),
-      });
+      const response = await fetch(
+        "https://murky-stamp-production.up.railway.app/todos/" + props.todo._id,
+        {
+          method: "PATCH",
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: `Bearer ${user.token}`,
+          },
+          body: JSON.stringify({ todo }),
+        }
+      );
 
       // receives update todo list from db
       const data = await response.json();

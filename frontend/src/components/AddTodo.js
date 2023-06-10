@@ -21,14 +21,17 @@ const AddTodo = (props) => {
     const todo = addEntry;
     try {
       // sends todo and auth token to server.
-      const response = await fetch("/todos", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Authorization: `Bearer ${user.token}`,
-        },
-        body: JSON.stringify({ todo }),
-      });
+      const response = await fetch(
+        "https://murky-stamp-production.up.railway.app/todos",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: `Bearer ${user.token}`,
+          },
+          body: JSON.stringify({ todo }),
+        }
+      );
 
       // gets all todos from server.
       const data = await response.json();
