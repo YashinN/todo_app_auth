@@ -1,5 +1,6 @@
 const express = require("express");
 require("dotenv").config();
+const cors = require("cors");
 const connectDB = require("./config/db");
 const PORT = process.env.PORT || 4000;
 
@@ -15,6 +16,8 @@ const { checkContentType } = require("./middleware/checkContent");
 
 // connect to mongoDb
 connectDB();
+
+app.use(cors());
 
 // use json
 app.use(express.json());

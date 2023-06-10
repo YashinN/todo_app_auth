@@ -28,11 +28,14 @@ function App() {
   const allTodosRequest = async (user) => {
     try {
       // req to fetch todos from db
-      const response = await fetch("/todos", {
-        headers: {
-          Authorization: `Bearer ${user.token}`,
-        },
-      });
+      const response = await fetch(
+        "https://murky-stamp-production.up.railway.app/todos",
+        {
+          headers: {
+            Authorization: `Bearer ${user.token}`,
+          },
+        }
+      );
 
       // recieves user todos from db
       const data = await response.json();

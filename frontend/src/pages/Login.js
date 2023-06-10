@@ -64,13 +64,16 @@ const Login = (props) => {
   const signupRequest = async () => {
     try {
       // post req with user email and password.
-      const response = await fetch("/user/signup", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ email, password }),
-      });
+      const response = await fetch(
+        "https://murky-stamp-production.up.railway.app/user/signup",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ email, password }),
+        }
+      );
 
       // receives user email and auth token.
       const data = await response.json();
