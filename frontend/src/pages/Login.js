@@ -23,13 +23,16 @@ const Login = (props) => {
   // makes request to server sends user credentials
   const loginRequest = async () => {
     try {
-      const response = await fetch("/user/login", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ email, password }),
-      });
+      const response = await fetch(
+        "https://murky-stamp-production.up.railway.app/user/login",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ email, password }),
+        }
+      );
 
       // recieves auth token and user email from db
       const data = await response.json();
