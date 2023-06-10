@@ -1,0 +1,42 @@
+.addTodo-form input {
+  border: none;
+  border-radius: 0;
+  border-bottom: 2px solid #699f90;
+
+  background-color: #96e3cd;
+}
+
+.addTodo-form input:focus {
+  box-shadow: none;
+  background-color: #96e3cd;
+
+  border-top: none;
+  border-bottom: 3px solid #6cc2d5;
+}
+
+.add-btn {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  padding: 0 !important;
+  margin-left: 20px;
+}
+
+.add-symbol {
+  font-size: 35px;
+}
+
+.add-group {
+  display: flex;
+  align-items: center;
+}
+
+.addTodo-title-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.add-error-container {
+  color: #e7195a;
+}

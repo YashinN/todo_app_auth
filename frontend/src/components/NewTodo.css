@@ -1,0 +1,55 @@
+.newTodo-form input {
+  border: none;
+  border-radius: 0;
+  border-bottom: 2px solid #699f90;
+  background-color: #96e3cd;
+}
+
+.newTodo-form {
+  position: relative;
+}
+
+.newTodo-form input:focus {
+  box-shadow: none;
+  background-color: #96e3cd;
+
+  border-top: none;
+  border-bottom: 3px solid #6cc2d5;
+}
+
+.control-btn {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  padding: 0 !important;
+  margin-left: 10px;
+}
+
+.control-symbol {
+  font-size: 30px;
+}
+
+.control-group {
+  display: flex;
+  align-items: center;
+}
+
+.active-edit:focus {
+  color: black !important;
+}
+
+.edit-group {
+  display: flex;
+  align-items: center;
+}
+
+.newTodo-title-container {
+  position: absolute;
+  top: -25px;
+  left: 3px;
+}
+
+.newTdo-error-container {
+  border-radius: 1rem;
+  color: #e7195a;
+}
